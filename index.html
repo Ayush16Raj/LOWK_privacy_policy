@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOWK — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  .updated { color: #666; font-size: 14px; }
+  code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — LOWK</h1>
+<p class="updated">Last updated: [DATE — 10/08/2026]</p>
+
+<p>LOWK is built around one core idea: you should be able to talk to people
+physically near you without an account, without a server, and without
+anyone — including us — reading your messages. This policy explains
+exactly what that means in practice, and the few places it isn't
+absolute.</p>
+
+<h2>What we don't collect</h2>
+<ul>
+  <li>No account. No sign-up. No email, username registration, or password.</li>
+  <li>No phone number is ever requested or collected.</li>
+  <li>Your chat messages are never sent to, or stored on, any server we
+      operate. They travel directly, phone-to-phone, over Bluetooth and
+      Wi-Fi, to people physically near you, and are never persisted after
+      the app closes.</li>
+  <li>We do not track your location. We do not log where you've been or
+      build any history of your movements.</li>
+</ul>
+
+<h2>Permissions LOWK requests, and why</h2>
+<p>Android requires these permissions for the peer-to-peer connection
+technology LOWK uses (Google's Nearby Connections). None of them are used
+for tracking:</p>
+<ul>
+  <li><strong>Location (Fine/Coarse):</strong> required by Android as a
+      prerequisite for Bluetooth and Wi-Fi scanning on many devices. LOWK
+      never reads your GPS coordinates and has no code path that does.</li>
+  <li><strong>Bluetooth (Scan/Advertise/Connect):</strong> used to discover
+      and connect to nearby phones running LOWK. Declared with Android's
+      <code>neverForLocation</code> flag, meaning we've told the system we
+      don't use Bluetooth scan results to infer your location.</li>
+  <li><strong>Nearby Wi-Fi Devices / Local Network Access:</strong> used
+      the same way, for Wi-Fi-based discovery of nearby phones.</li>
+</ul>
+
+<h2>The one thing we do collect: safety reports</h2>
+<p>If you tap "report" on a message, LOWK sends the following to our
+Firebase/Firestore database, the only network request the app ever
+makes:</p>
+<ul>
+  <li>The alias the reported message was sent under</li>
+  <li>A random, anonymous per-install identifier (see below) tied to the
+      <em>reported</em> device — not yours, unless you're the one being
+      reported</li>
+  <li>The text of the reported message</li>
+  <li>The reason category you selected</li>
+  <li>A timestamp</li>
+</ul>
+<p>We deliberately do <strong>not</strong> collect anything identifying
+<em>you</em> as the reporter — not your alias, not your device ID, not
+your IP address. Reporting is designed to be as anonymous as using the
+app itself.</p>
+
+<h2>The anonymous per-install identifier</h2>
+<p>LOWK uses Firebase Installations to generate a random identifier unique
+to your app install, with no personal information attached. It exists
+for one purpose: letting a repeat offender be recognized across different
+chosen names, since names in LOWK can be changed freely at any time. This
+identifier:</p>
+<ul>
+  <li>Is never shown to other users in any readable form</li>
+  <li>Is not linked to your name, phone number, email, or any other
+      personal information</li>
+  <li>Resets completely if you uninstall and reinstall the app</li>
+</ul>
+
+<h2>Who can see your messages</h2>
+<p>Anyone running LOWK within Bluetooth/Wi-Fi range of you can see
+messages sent to the local mesh, by design — that's how the app works.
+Messages may also be relayed through other nearby phones to extend their
+reach, the same way a message passed hand-to-hand would be. Treat LOWK
+messages the way you'd treat something said out loud in a public room.</p>
+
+<h2>Data retention</h2>
+<p>Chat messages are never stored by us and disappear once the app session
+ends. Safety reports are retained in our database for as long as needed
+for safety review and legal compliance. Since there are no accounts, there
+is no "delete my account" action to offer — if you believe a report was
+filed about your device and want it removed, contact us at the address
+below.</p>
+
+<h2>Children's privacy</h2>
+<p>LOWK is intended for users 18 and older and is age-restricted on the
+Play Store accordingly. We do not knowingly collect information from
+anyone under 18.</p>
+
+<h2>Third-party services</h2>
+<p>LOWK uses Google Play Services (Nearby Connections) and Google
+Firebase. Their handling of any data that passes through them is governed
+by Google's own privacy policy, available at
+<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes in a material way, we'll update the date at the
+top of this page and, where required, prompt you to review it again in
+the app.</p>
+
+<h2>Contact</h2>
+<p>Privacy questions or data-removal requests: <strong>ayush16official@gmail.com</strong></p>
+
+</body>
+</html>
